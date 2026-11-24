@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  background: #f6f8f2;
+  color: #1d1d1b;
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 8px);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #2f6a14;
+  outline-offset: 2px;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
